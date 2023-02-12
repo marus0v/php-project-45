@@ -1,0 +1,11 @@
+{
+    "name": "hexlet/code",
+    "description": "brain-games",
+    "type": "project",
+    "authors": [
+        {
+            "name": "marus0v"
+        }
+    ],
+    "require": {}
+}
