@@ -7,7 +7,9 @@
             "name": "marus0v"
         }
     ],
-    "require": {},
+    "require": {
+        "wp-cli/php-cli-tools": "^0.11.17"
+    },
     "bin": [
         "bin/brain-games"
     ]
