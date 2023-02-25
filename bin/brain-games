@@ -16,6 +16,6 @@ if (file_exists($autoloadPath1)) {
 
 // namespace BrainGames\Cli;
 
-use function src\Cli\welcomeUser;
+use function BrainGames\Cli\welcomeUser;
 
 welcomeUser();
