@@ -1,7 +1,5 @@
 <?php
 
-// require_once(__DIR__ . 'vendor/wp-cli/php-cli-tools/lib/cli/cli.php');
-
 namespace BrainGames\Cli;
 
 use function cli\line;
