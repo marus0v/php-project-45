@@ -9,6 +9,8 @@ function isEven($number) : bool
 {
     if ($number % 2 === 0) {
         return true;
+    } else {
+        return false;
     }
 }
 
@@ -17,13 +19,13 @@ function evenGame()
     line('Answer "yes" if the number is even, otherwise answer "no".');
     $winsNumber = 0;
     while ($winsNumber < 3) {
-        $number = mt_rand(0, 10000);
+        $number = mt_rand(0, 100);
         line("Question: %s!", $number);
         $answer = prompt('Your answer: ');
         if (isEven($number) && $answer === 'yes') {
             $winsNumber++;
             line('Correct!');
-        } elseif (!isEven($number)) && $answer === 'no') {
+        } elseif ((!isEven($number)) && ($answer === 'no')) {
             $winsNumber++;
             line('Correct!');
         } else {
@@ -31,5 +33,5 @@ function evenGame()
             break;
         }
     }
-    line("Congratulations, %s!, $name);
+    line("Congratulations, %s!", $name);
 }
