@@ -30,7 +30,6 @@ function evenGame($userName)
             line('Correct!');
         } else {
             return line("Let's try again, %s!", $userName);
-            // break;
         }
     }
     return line("Congratulations, %s!", $userName);
