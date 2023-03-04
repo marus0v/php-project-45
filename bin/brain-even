@@ -20,6 +20,6 @@ if (file_exists($autoloadPath1)) {
 use function BrainGames\Cli\welcomeUser;
 use function BrainGames\Even\evenGame;
 
-welcomeUser();
+$userName = welcomeUser();
 
-evenGame();
+evenGame($userName);

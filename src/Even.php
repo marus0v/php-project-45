@@ -14,7 +14,7 @@ function isEven($number) : bool
     }
 }
 
-function evenGame()
+function evenGame($userName)
 {
     line('Answer "yes" if the number is even, otherwise answer "no".');
     $winsNumber = 0;
@@ -25,13 +25,13 @@ function evenGame()
         if (isEven($number) && $answer === 'yes') {
             $winsNumber++;
             line('Correct!');
-        } elseif ((!isEven($number)) && ($answer === 'no')) {
+        } elseif (!isEven($number) && $answer === 'no') {
             $winsNumber++;
             line('Correct!');
         } else {
-            line("Let's try again, %s!", $name);
-            break;
+            return line("Let's try again, %s!", $userName);
+            // break;
         }
     }
-    line("Congratulations, %s!", $name);
+    return line("Congratulations, %s!", $userName);
 }
