@@ -7,8 +7,8 @@ use function BrainGames\Calc\getAnswer;
 
 function getValues() : array
 {
-    $num1 = mt_rand(0, 100);
-    $num2 = mt_rand(0, 100);
+    $num1 = mt_rand(1, 100);
+    $num2 = mt_rand(1, 100);
     $values[] = $num1;
     $values[] = $num2;
     return $values;
