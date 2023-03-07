@@ -13,23 +13,8 @@ if (file_exists($autoloadPath1)) {
 }
 
 use function BrainGames\Cli\welcomeUser;
-use function BrainGames\Even\evenGame;
-use function BrainGames\Calc\getValues;
-use function BrainGames\Calc\countValues;
-use function BrainGames\Calc\getAnswer;
-use function BrainGames\Calc\checkAnswer;
 use function BrainGames\Calc\calcGame;
-
-// $values = getValues();
-
-// countValues($values);
-// $result = (countValues($values)[3]);
-
-// $answer = getAnswer();
-
-// checkAnswer($answer, $result);
 
 $userName = welcomeUser();
 
-// evenGame($userName);
 calcGame($userName);
