@@ -13,13 +13,7 @@ if (file_exists($autoloadPath1)) {
 }
 
 use function BrainGames\Cli\welcomeUser;
-use function BrainGames\GCD\getValues;
-use function BrainGames\GCD\countValues;
 use function BrainGames\GCD\gcdGame;
-
-// $array = getValues();
-
-// countValues($array);
 
 $userName = welcomeUser();
 

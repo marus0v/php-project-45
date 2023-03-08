@@ -15,7 +15,6 @@ function getValues() : array
 }
 function countValues($values) : array
 {
-    // $sortedValues = rsort($values);
     $numA = $values[0];
     $numB = $values[1];
     echo ("Question: {$numA} {$numB} \n");
