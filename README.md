@@ -9,3 +9,5 @@ https://asciinema.org/a/3czjQLApAXp9U3ixq6B9FY1Xi - 6 step
 https://asciinema.org/a/dsdrbo74pkkhsDd8WinqNIUUu - 7 step: win
 https://asciinema.org/a/ZAgifeyackXHtP1ptllcOAIKH - 7 step: lose
 
+https://asciinema.org/a/nK2MEYiqTxgqkLgoaRAgZmtGW - 8 step
+
