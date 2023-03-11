@@ -18,7 +18,7 @@ function getValues() : array
 }
 function hideValue($values) : array
 {
-    $i = mt_rand(1, 10);
+    $i = mt_rand(0, 9);
     $hid_values = $values;
     $hid_values[$i] = "..";
     $values[10] = $values[$i];
