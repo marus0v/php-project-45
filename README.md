@@ -11,3 +11,5 @@ https://asciinema.org/a/ZAgifeyackXHtP1ptllcOAIKH - 7 step: lose
 
 https://asciinema.org/a/nK2MEYiqTxgqkLgoaRAgZmtGW - 8 step
 
+https://asciinema.org/a/1Lt1CNkOSdlo9bZIQOGL65DQB - 9 step
+
