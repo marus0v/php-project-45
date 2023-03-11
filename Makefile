@@ -19,5 +19,7 @@ brain-gcd: # запустить brain-gcd (поиск НОД)
 brain-progression: # запустить brain-progression (поиск недостающего значения в прогрессии)
 	./bin/brain-progression
 
+brain-prime: # запустить brain-prime (проверка, простое число или нет)
+	./bin/brain-prime
 lint: # установить CodeSniffer
 	composer exec --verbose phpcs -- --standard=PSR12 src bin
