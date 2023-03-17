@@ -9,7 +9,7 @@ function getValues(): array
 {
     $num1 = mt_rand(1, 100);
     $num2 = mt_rand(1, 10);
-    $values[] = array();
+    $values = array();
     $values[] = $num1;
     for ($i = 0; $i < 9; $i++) {
         $values[] = $values[$i] + $num2;
