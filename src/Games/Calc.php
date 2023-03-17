@@ -46,7 +46,7 @@ function getAnswer() : int
 function calcGame($userName)
 {
     $winsNumber = 0;
-    line("What is the result of expression?");
+    line("What is the result of the expression?");
     while ($winsNumber < 3) {
         $values = getValues();
         $result = (countValues($values)[3]);
