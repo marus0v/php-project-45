@@ -11,6 +11,7 @@ function getValues(): array
     $operation = $operations[mt_rand(0, 2)];
     $num1 = mt_rand(0, 100);
     $num2 = mt_rand(0, 100);
+    $values = array();
     $values[] = $operation;
     $values[] = $num1;
     $values[] = $num2;
