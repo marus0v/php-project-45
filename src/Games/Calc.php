@@ -17,8 +17,9 @@ function getValues(): array
     $values[] = $num2;
     return $values;
 }
-function countValues($values): array
+function countValues(array $values): array
 {
+    $result = 0;
     switch ($values[0]) {
         case "+":
             $question = "{$values[1]} + {$values[2]}";
@@ -44,7 +45,7 @@ function getAnswer(): int
     $answer = prompt('Your answer: ');
     return $answer;
 }
-function calcGame($userName)
+function calcGame(string $userName)
 {
     $winsNumber = 0;
     line("What is the result of the expression?");
