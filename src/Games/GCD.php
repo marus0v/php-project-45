@@ -9,11 +9,12 @@ function getValues(): array
 {
     $num1 = mt_rand(1, 100);
     $num2 = mt_rand(1, 100);
+    $values = array();
     $values[] = $num1;
     $values[] = $num2;
     return $values;
 }
-function countValues($values): array
+function countValues(array $values): array
 {
     $numA = $values[0];
     $numB = $values[1];
@@ -36,7 +37,7 @@ function countValues($values): array
     }
     return $values;
 }
-function gcdGame($userName)
+function gcdGame(string $userName)
 {
     echo ("Find the greatest common divisor of given numbers. \n");
     $winsNumber = 0;
