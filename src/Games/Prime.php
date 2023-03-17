@@ -11,7 +11,7 @@ function getValue(): int
     line("Question: %s", $num);
     return $num;
 }
-function isPrime($number): bool
+function isPrime(int $number): bool
 {
     $flag = true;
     for ($i = 2; $i < $number; $i++) {
@@ -23,7 +23,7 @@ function isPrime($number): bool
     return $flag;
 }
 
-function primeGame($userName)
+function primeGame(string $userName)
 {
     line('Answer "yes" if given number is prime. Otherwise answer "no".');
     $winsNumber = 0;
