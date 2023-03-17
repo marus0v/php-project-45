@@ -5,7 +5,7 @@ namespace BrainGames\GCD;
 use function cli\line;
 use function BrainGames\Calc\getAnswer;
 
-function getValues() : array
+function getValues(): array
 {
     $num1 = mt_rand(1, 100);
     $num2 = mt_rand(1, 100);
@@ -13,7 +13,7 @@ function getValues() : array
     $values[] = $num2;
     return $values;
 }
-function countValues($values) : array
+function countValues($values): array
 {
     $numA = $values[0];
     $numB = $values[1];
@@ -54,4 +54,3 @@ function gcdGame($userName)
     }
     return line("Congratulations, %s!", $userName);
 }
-

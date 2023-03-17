@@ -5,13 +5,13 @@ namespace BrainGames\Prime;
 use function cli\line;
 use function cli\prompt;
 
-function getValue() : int
+function getValue(): int
 {
     $num = mt_rand(1, 1000);
     line("Question: %s", $num);
     return $num;
 }
-function isPrime($number) : bool
+function isPrime($number): bool
 {
     $flag = true;
     for ($i = 2; $i < $number; $i++) {

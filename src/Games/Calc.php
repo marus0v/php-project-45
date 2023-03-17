@@ -5,7 +5,7 @@ namespace BrainGames\Calc;
 use function cli\line;
 use function cli\prompt;
 
-function getValues() : array
+function getValues(): array
 {
     $operations = array("+", "-", "*");
     $operation = $operations[mt_rand(0, 2)];
@@ -16,9 +16,9 @@ function getValues() : array
     $values[] = $num2;
     return $values;
 }
-function countValues($values) : array
+function countValues($values): array
 {
-    switch($values[0]) {
+    switch ($values[0]) {
         case "+":
             $question = "{$values[1]} + {$values[2]}";
             line("Question: %s", $question);
@@ -38,7 +38,7 @@ function countValues($values) : array
     $values[] = $result;
     return $values;
 }
-function getAnswer() : int
+function getAnswer(): int
 {
     $answer = prompt('Your answer: ');
     return $answer;

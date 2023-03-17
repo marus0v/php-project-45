@@ -5,7 +5,7 @@ namespace BrainGames\Even;
 use function cli\line;
 use function cli\prompt;
 
-function isEven($number) : bool
+function isEven($number): bool
 {
     if ($number % 2 === 0) {
         return true;

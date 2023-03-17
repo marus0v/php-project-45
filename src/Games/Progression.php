@@ -5,7 +5,7 @@ namespace BrainGames\Progression;
 use function cli\line;
 use function BrainGames\Calc\getAnswer;
 
-function getValues() : array
+function getValues(): array
 {
     $num1 = mt_rand(1, 100);
     $num2 = mt_rand(1, 10);
@@ -16,7 +16,7 @@ function getValues() : array
     $str_values = implode(" ", $values);
     return $values;
 }
-function hideValue($values) : array
+function hideValue($values): array
 {
     $i = mt_rand(0, 9);
     $hid_values = $values;
