@@ -13,8 +13,8 @@ if (file_exists($autoloadPath1)) {
 }
 
 use function BrainGames\Cli\welcomeUser;
-use function BrainGames\Calc\calcGame;
+use function BrainGames\Calc\calculateGame;
 
 $userName = welcomeUser();
 
-calcGame($userName);
+calculateGame($userName);

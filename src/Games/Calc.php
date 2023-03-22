@@ -45,7 +45,7 @@ function getAnswer(): int
     $answer = prompt('Your answer: ');
     return $answer;
 }
-function calcGame(string $userName)
+function calculateGame(string $userName)
 {
     $winsNumber = 0;
     line("What is the result of the expression?");
