@@ -7,7 +7,7 @@ use function cli\prompt;
 
 function getValues(): array
 {
-    $operations = array("+", "-", "*");
+    $operations = ["+", "-", "*"];
     $operation = $operations[mt_rand(0, 2)];
     $num1 = mt_rand(0, 100);
     $num2 = mt_rand(0, 100);
