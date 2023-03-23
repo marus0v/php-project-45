@@ -36,6 +36,8 @@ function countValues(array $values): array
             line("Question: %s", $question);
             $result = $values[1] * $values[2];
             break;
+        default:
+            line("No operator selected!");
     }
     $values[] = $result;
     return $values;
