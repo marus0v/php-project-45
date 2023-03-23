@@ -37,7 +37,7 @@ function countValues(array $values): array
             $result = $values[1] * $values[2];
             break;
         default:
-            line("No operator selected!");
+            throw Exception('No operator selected!');
     }
     $values[] = $result;
     return $values;
