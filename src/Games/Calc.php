@@ -20,29 +20,36 @@ function getValues(): array
 function countValues(array $values): array
 {
     $result = 0;
+    $qna = array();
     switch ($values[0]) {
         case "+":
             $question = "{$values[1]} + {$values[2]}";
-            line("Question: %s", $question);
+            $qna[] = $question;
+            // line("Question: %s", $question);
             $result = $values[1] + $values[2];
+            $qna[] = $result;
             break;
         case "-":
             $question = "{$values[1]} - {$values[2]}";
-            line("Question: %s", $question);
+            $qna[] = $question;
+            // line("Question: %s", $question);
             $result = $values[1] - $values[2];
+            $qna[] = $result;
             break;
         case "*":
             $question = "{$values[1]} * {$values[2]}";
-            line("Question: %s", $question);
+            $qna[] = $question;
+            // line("Question: %s", $question);
             $result = $values[1] * $values[2];
+            $qna[] = $result;
             break;
         default:
             throw Exception('No operator selected!');
     }
-    $values[] = $result;
-    return $values;
+    // $values[] = $result;
+    return $qna;
 }
-function getAnswer(): int
+function getAnswer(): string
 {
     $answer = prompt('Your answer: ');
     return $answer;
@@ -64,4 +71,17 @@ function calculateGame(string $userName)
         }
     }
     return line("Congratulations, %s!", $userName);
+}
+
+function runCalcGame(): array
+{
+    $counter = 1;
+    $questionsAndAnswers = array();
+    $questionsAndAnswers[0] = "What is the result of the expression?";
+    while ($counter < 4) {
+        $values = getValues();
+        $questionsAndAnswers[$counter] = countValues($values);
+        $counter++;
+    }
+    return $questionsAndAnswers;
 }
