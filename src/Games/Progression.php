@@ -3,7 +3,7 @@
 namespace BrainGames\Progression;
 
 use function cli\line;
-use function BrainGames\Calc\getAnswer;
+use function BrainGames\Engine\getAnswer;
 
 function getValues(): array
 {
@@ -36,7 +36,7 @@ function proGame(string $userName)
         $values = getValues();
         $result = (hideValue($values)[10]);
         $ans = getAnswer();
-        if ($ans === $result) {
+        if ($ans == $result) {
             $winsNumber++;
             line('Correct!');
         } else {
