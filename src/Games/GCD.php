@@ -3,7 +3,7 @@
 namespace BrainGames\GCD;
 
 use function cli\line;
-use function BrainGames\Calc\getAnswer;
+use function BrainGames\Engine\getAnswer;
 
 function getValues(): array
 {
@@ -45,7 +45,7 @@ function gcdGame(string $userName)
         $values = getValues();
         $result = (countValues($values)[2]);
         $ans = getAnswer();
-        if ($ans === $result) {
+        if ($ans == $result) {
             $winsNumber++;
             line('Correct!');
         } else {
