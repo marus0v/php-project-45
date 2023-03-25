@@ -44,7 +44,7 @@ function countValues(array $values): array
             $qna[] = $result;
             break;
         default:
-            throw new Exception('No operator selected!');
+            throw new \Exception('No operator selected!');
     }
     // $values[] = $result;
     return $qna;
