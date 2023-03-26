@@ -16,13 +16,13 @@ function isEven(int $number): bool
 
 function evenGame(string $userName)
 {
-    $qna = array();
+    // $qna = array();
     // line('Answer "yes" if the number is even, otherwise answer "no".');
     $winsNumber = 0;
     while ($winsNumber < 3) {
         $number = mt_rand(0, 100);
         line("Question: %s!", $number);
-        $qna[] = $question;
+        // $qna[] = $question;
         $answer = prompt('Your answer: ');
         if (isEven($number) && $answer === 'yes') {
             $winsNumber++;
