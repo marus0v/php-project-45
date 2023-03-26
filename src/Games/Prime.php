@@ -44,3 +44,28 @@ function primeGame(string $userName)
     }
     return line("Congratulations, %s!", $userName);
 }
+
+function getQandA(): array
+{
+    $qna = array();
+    $number = mt_rand(0, 1000);
+    $qna[] = $number;
+    if (isPrime($number)) {
+        $qna[] = "yes";
+    } elseif (!isPrime($number)) {
+        $qna[] = "no";
+    }
+    return $qna;
+}
+function runPrimeGame(): array
+{
+    $counter = 1;
+    $questionsAndAnswers = array();
+    $questionsAndAnswers[0] = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    while ($counter < 4) {
+        // $values = getValues();
+        $questionsAndAnswers[$counter] = getQandA();
+        $counter++;
+    }
+    return $questionsAndAnswers;
+}

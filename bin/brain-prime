@@ -12,9 +12,12 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function BrainGames\Cli\welcomeUser;
-use function BrainGames\Prime\primeGame;
+use function BrainGames\Engine\welcomeUser;
+use function BrainGames\Engine\runGame;
+use function BrainGames\Prime\runPrimeGame;
 
-$userName = welcomeUser();
+// $userName = welcomeUser();
 
-primeGame($userName);
+// primeGame($userName);
+
+runGame(welcomeUser(), runPrimeGame());
