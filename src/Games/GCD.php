@@ -16,9 +16,11 @@ function getValues(): array
 }
 function countValues(array $values): array
 {
+    $qna = array();
     $numA = $values[0];
     $numB = $values[1];
-    echo ("Question: {$numA} {$numB} \n");
+    // echo ("Question: {$numA} {$numB} \n");
+    $qna[] = "{$numA} {$numB}";
     $gcd = 1;
     if ($numA == $numB) {
         $gcd = $numA;
@@ -33,9 +35,10 @@ function countValues(array $values): array
             }
         }
         $gcd = $numA + $numB;
+        $qna[] = $gcd;
         $values[] = $gcd;
     }
-    return $values;
+    return $qna;
 }
 function gcdGame(string $userName)
 {
@@ -54,4 +57,17 @@ function gcdGame(string $userName)
         }
     }
     return line("Congratulations, %s!", $userName);
+}
+
+function runGcdGame(): array
+{
+    $counter = 1;
+    $questionsAndAnswers = array();
+    $questionsAndAnswers[0] = "Find the greatest common divisor of given numbers.";
+    while ($counter < 4) {
+        $values = getValues();
+        $questionsAndAnswers[$counter] = countValues($values);
+        $counter++;
+    }
+    return $questionsAndAnswers;
 }
