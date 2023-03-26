@@ -19,13 +19,16 @@ function getValues(): array
 }
 function hideValue(array $values): array
 {
+    $qna = array();
     $i = mt_rand(0, 9);
     $hid_values = $values;
     $hid_values[$i] = "..";
-    $values[10] = $values[$i];
-    $str_values = implode(" ", $hid_values);
-    line("Question: %s!", $str_values);
-    return $values;
+    // $values[10] = $values[$i];
+    // $str_values = implode(" ", $hid_values);
+    $qna[] = implode(" ", $hid_values);
+    $qna[] = $values[$i];
+    // line("Question: %s!", $str_values);
+    return $qna;
 }
 
 function proGame(string $userName)
@@ -45,4 +48,27 @@ function proGame(string $userName)
         }
     }
     return line("Congratulations, %s!", $userName);
+}
+
+function getQandA(array $values): array
+{
+    $qna = array();
+    $i = mt_rand(0, 9);
+    $hid_values = $values;
+    $hid_values[$i] = "..";
+    $qna[] = implode(" ", $hid_values);
+    $qna[] = $values[$i];
+    return $qna;
+}
+function runProGame()
+{
+    $counter = 1;
+    $questionsAndAnswers = array();
+    $questionsAndAnswers[0] = "What number is missing in the progression?";
+    while ($counter < 4) {
+        $values = getValues();
+        $questionsAndAnswers[$counter] = getQandA($values);
+        $counter++;
+    }
+    return $questionsAndAnswers;
 }
