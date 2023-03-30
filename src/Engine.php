@@ -5,6 +5,8 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
+const TOTALWINSNUMBER = 3;
+
 function welcomeUser()
 {
     line('Welcome to the Brain Games!');
@@ -24,7 +26,7 @@ function runGame(array $questionsAndAnswers)
     $userName = welcomeUser();
     $winsNumber = 0;
     line("'{$questionsAndAnswers[0]}'");
-    while ($winsNumber < 3) {
+    while ($winsNumber < TOTALWINSNUMBER) {
         line("Question: %s", $questionsAndAnswers[$winsNumber + 1][0]);
         (string)$result = $questionsAndAnswers[$winsNumber + 1][1];
         $ans = getAnswer();
