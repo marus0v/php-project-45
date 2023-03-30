@@ -6,6 +6,7 @@ use function cli\line;
 use function cli\prompt;
 
 use const BrainGames\Engine\TOTALWINSNUMBER;
+
 const DESCRIPTION = "What is the result of the expression?";
 
 function getDescription(): string
