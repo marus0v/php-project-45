@@ -5,6 +5,9 @@ namespace BrainGames\GCD;
 use function cli\line;
 use function BrainGames\Engine\getAnswer;
 
+const TOTALWINSNUMBER = 3;
+const DESCRIPTION = "Find the greatest common divisor of given numbers.";
+
 function getValues(): array
 {
     $num1 = mt_rand(1, 100);
@@ -19,7 +22,6 @@ function countValues(array $values): array
     $qna = array();
     $numA = $values[0];
     $numB = $values[1];
-    // echo ("Question: {$numA} {$numB} \n");
     $qna[] = "{$numA} {$numB}";
     $gcd = 1;
     if ($numA == $numB) {
@@ -40,31 +42,13 @@ function countValues(array $values): array
     }
     return $qna;
 }
-function gcdGame(string $userName)
-{
-    echo ("Find the greatest common divisor of given numbers. \n");
-    $winsNumber = 0;
-    while ($winsNumber < 3) {
-        $values = getValues();
-        $result = (countValues($values)[2]);
-        $ans = getAnswer();
-        if ($ans == $result) {
-            $winsNumber++;
-            line('Correct!');
-        } else {
-            echo ("'{$ans}' is wrong answer ;(. Correct answer was '{$result}' \n");
-            return line("Let's try again, %s!", $userName);
-        }
-    }
-    return line("Congratulations, %s!", $userName);
-}
 
 function runGcdGame(): array
 {
     $counter = 1;
     $questionsAndAnswers = array();
-    $questionsAndAnswers[0] = "Find the greatest common divisor of given numbers.";
-    while ($counter < 4) {
+    $questionsAndAnswers[0] = DESCRIPTION;
+    while ($counter < (TOTALWINSNUMBER + 1)) {
         $values = getValues();
         $questionsAndAnswers[$counter] = countValues($values);
         $counter++;
