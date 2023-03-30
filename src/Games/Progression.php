@@ -5,6 +5,7 @@ namespace BrainGames\Progression;
 use function cli\line;
 
 use const BrainGames\Engine\TOTALWINSNUMBER;
+
 const DESCRIPTION = "What number is missing in the progression?";
 
 function getValues(): array

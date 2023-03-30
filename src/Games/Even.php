@@ -6,6 +6,7 @@ use function cli\line;
 use function cli\prompt;
 
 use const BrainGames\Engine\TOTALWINSNUMBER;
+
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function getDescription(): string

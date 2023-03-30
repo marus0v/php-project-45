@@ -6,6 +6,7 @@ use function cli\line;
 use function cli\prompt;
 
 use const BrainGames\Engine\TOTALWINSNUMBER;
+
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
 function getValue(): int
