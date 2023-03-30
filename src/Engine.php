@@ -23,7 +23,7 @@ function runGame(array $questionsAndAnswers)
 {
     $userName = welcomeUser();
     $winsNumber = 0;
-    line("'{$questionsAndAnswers[0]}' \n");
+    line("'{$questionsAndAnswers[0]}'");
     while ($winsNumber < 3) {
         line("Question: %s", $questionsAndAnswers[$winsNumber + 1][0]);
         (string)$result = $questionsAndAnswers[$winsNumber + 1][1];
@@ -32,7 +32,7 @@ function runGame(array $questionsAndAnswers)
             $winsNumber++;
             line('Correct!');
         } else {
-            echo ("'{$ans}' is wrong answer ;(. Correct answer was '{$result}' \n");
+            line("'{$ans}' is wrong answer ;(. Correct answer was '{$result}'");
             return line("Let's try again, %s!", $userName);
         }
     }
