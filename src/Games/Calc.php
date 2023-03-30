@@ -6,6 +6,7 @@ use function cli\line;
 use function cli\prompt;
 
 const TOTALWINSNUMBER = 3;
+const DESCRIPTION = "What is the result of the expression?";
 
 function getValues(): array
 {
@@ -52,7 +53,7 @@ function runCalcGame(): array
 {
     $counter = 1;
     $questionsAndAnswers = array();
-    $questionsAndAnswers[0] = "What is the result of the expression?";
+    $questionsAndAnswers[0] = DESCRIPTION;
     while ($counter < (TOTALWINSNUMBER + 1)) {
         $values = getValues();
         $questionsAndAnswers[$counter] = countValues($values);
