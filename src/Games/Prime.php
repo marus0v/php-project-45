@@ -9,6 +9,11 @@ use const BrainGames\Engine\TOTALWINSNUMBER;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
+function getDescription(): string
+{
+    return DESCRIPTION;
+}
+
 function getValue(): int
 {
     $num = mt_rand(1, 1000);
