@@ -21,11 +21,11 @@ function getAnswer(): string
     return $answer;
 }
 
-function runGame(array $questionsAndAnswers)
+function runGame(string $description, array $questionsAndAnswers)
 {
     $userName = welcomeUser();
     $winsNumber = 0;
-    line("'{$questionsAndAnswers[0]}'");
+    line($description);
     while ($winsNumber < TOTALWINSNUMBER) {
         line("Question: %s", $questionsAndAnswers[$winsNumber + 1][0]);
         (string)$result = $questionsAndAnswers[$winsNumber + 1][1];
