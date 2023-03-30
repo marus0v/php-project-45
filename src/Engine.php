@@ -19,13 +19,12 @@ function getAnswer(): string
     return $answer;
 }
 
-function runGame(string $userName, array $questionsAndAnswers)
+function runGame(array $questionsAndAnswers)
 {
+    $userName = welcomeUser();
     $winsNumber = 0;
-    // line("What is the result of the expression?");
-    echo ("'{$questionsAndAnswers[0]}' \n");
+    line("'{$questionsAndAnswers[0]}' \n");
     while ($winsNumber < 3) {
-        // $values = getValues();
         line("Question: %s", $questionsAndAnswers[$winsNumber + 1][0]);
         (string)$result = $questionsAndAnswers[$winsNumber + 1][1];
         $ans = getAnswer();
