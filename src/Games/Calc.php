@@ -5,6 +5,8 @@ namespace BrainGames\Calc;
 use function cli\line;
 use function cli\prompt;
 
+const TOTALWINSNUMBER = 3;
+
 function getValues(): array
 {
     $operations = ["+", "-", "*"];
@@ -51,7 +53,7 @@ function runCalcGame(): array
     $counter = 1;
     $questionsAndAnswers = array();
     $questionsAndAnswers[0] = "What is the result of the expression?";
-    while ($counter < 4) {
+    while ($counter < (TOTALWINSNUMBER + 1)) {
         $values = getValues();
         $questionsAndAnswers[$counter] = countValues($values);
         $counter++;
