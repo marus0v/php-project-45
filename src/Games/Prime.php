@@ -5,6 +5,9 @@ namespace BrainGames\Prime;
 use function cli\line;
 use function cli\prompt;
 
+const TOTALWINSNUMBER = 3;
+const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+
 function getValue(): int
 {
     $num = mt_rand(1, 1000);
@@ -23,28 +26,6 @@ function isPrime(int $number): bool
     return $flag;
 }
 
-function primeGame(string $userName)
-{
-    line('Answer "yes" if given number is prime. Otherwise answer "no".');
-    $winsNumber = 0;
-    while ($winsNumber < 3) {
-        $value = getValue();
-    //    print_r(isPrime($value));
-    //    $ans = getAnswer();
-        $answer = prompt('Your answer: ');
-        if (isPrime($value) && $answer === 'yes') {
-            $winsNumber++;
-            line('Correct!');
-        } elseif (!isPrime($value) && $answer === 'no') {
-            $winsNumber++;
-            line('Correct!');
-        } else {
-            return line("Let's try again, %s!", $userName);
-        }
-    }
-    return line("Congratulations, %s!", $userName);
-}
-
 function getQandA(): array
 {
     $qna = array();
@@ -61,9 +42,8 @@ function runPrimeGame(): array
 {
     $counter = 1;
     $questionsAndAnswers = array();
-    $questionsAndAnswers[0] = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    while ($counter < 4) {
-        // $values = getValues();
+    $questionsAndAnswers[0] = DESCRIPTION;
+    while ($counter < (TOTALWINSNUMBER + 1)) {
         $questionsAndAnswers[$counter] = getQandA();
         $counter++;
     }
