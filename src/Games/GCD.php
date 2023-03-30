@@ -3,9 +3,8 @@
 namespace BrainGames\GCD;
 
 use function cli\line;
-use function BrainGames\Engine\getAnswer;
 
-const TOTALWINSNUMBER = 3;
+use const BrainGames\Engine\TOTALWINSNUMBER;
 const DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
 function getValues(): array

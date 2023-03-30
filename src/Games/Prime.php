@@ -5,7 +5,7 @@ namespace BrainGames\Prime;
 use function cli\line;
 use function cli\prompt;
 
-const TOTALWINSNUMBER = 3;
+use const BrainGames\Engine\TOTALWINSNUMBER;
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
 function getValue(): int
@@ -14,6 +14,7 @@ function getValue(): int
     line("Question: %s", $num);
     return $num;
 }
+
 function isPrime(int $number): bool
 {
     $flag = true;

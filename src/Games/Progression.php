@@ -3,9 +3,8 @@
 namespace BrainGames\Progression;
 
 use function cli\line;
-use function BrainGames\Engine\getAnswer;
 
-const TOTALWINSNUMBER = 3;
+use const BrainGames\Engine\TOTALWINSNUMBER;
 const DESCRIPTION = "What number is missing in the progression?";
 
 function getValues(): array

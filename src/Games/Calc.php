@@ -5,7 +5,7 @@ namespace BrainGames\Calc;
 use function cli\line;
 use function cli\prompt;
 
-const TOTALWINSNUMBER = 3;
+use const BrainGames\Engine\TOTALWINSNUMBER;
 const DESCRIPTION = "What is the result of the expression?";
 
 function getValues(): array

@@ -5,7 +5,7 @@ namespace BrainGames\Even;
 use function cli\line;
 use function cli\prompt;
 
-const TOTALWINSNUMBER = 3;
+use const BrainGames\Engine\TOTALWINSNUMBER;
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function isEven(int $number): bool
