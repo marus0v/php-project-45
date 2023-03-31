@@ -9,11 +9,6 @@ use const BrainGames\Engine\TOTALWINSNUMBER;
 
 const DESCRIPTION = "What is the result of the expression?";
 
-function getDescription(): string
-{
-    return DESCRIPTION;
-}
-
 function getValues(): array
 {
     $operations = ["+", "-", "*"];
