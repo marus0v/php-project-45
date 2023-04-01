@@ -14,6 +14,7 @@ if (file_exists($autoloadPath1)) {
 
 use function BrainGames\Engine\runGame;
 use function BrainGames\Even\runEvenGame;
-use function BrainGames\Even\getDescription;
 
-runGame(getDescription(), runEvenGame());
+use const BrainGames\Even\DESCRIPTION;
+
+runGame(DESCRIPTION, runEvenGame());

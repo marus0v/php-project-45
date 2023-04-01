@@ -9,11 +9,6 @@ use const BrainGames\Engine\TOTALWINSNUMBER;
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function getDescription(): string
-{
-    return DESCRIPTION;
-}
-
 function isEven(int $number): bool
 {
     if ($number % 2 === 0) {

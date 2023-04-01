@@ -8,11 +8,6 @@ use const BrainGames\Engine\TOTALWINSNUMBER;
 
 const DESCRIPTION = "What number is missing in the progression?";
 
-function getDescription(): string
-{
-    return DESCRIPTION;
-}
-
 function getValues(): array
 {
     $num1 = mt_rand(1, 100);

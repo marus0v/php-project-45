@@ -8,11 +8,6 @@ use const BrainGames\Engine\TOTALWINSNUMBER;
 
 const DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
-function getDescription(): string
-{
-    return DESCRIPTION;
-}
-
 function getValues(): array
 {
     $num1 = mt_rand(1, 100);

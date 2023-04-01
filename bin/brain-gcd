@@ -14,6 +14,7 @@ if (file_exists($autoloadPath1)) {
 
 use function BrainGames\Engine\runGame;
 use function BrainGames\GCD\runGcdGame;
-use function BrainGames\GCD\getDescription;
 
-runGame(getDescription(), runGcdGame());
+use const BrainGames\GCD\DESCRIPTION;
+
+runGame(DESCRIPTION, runGcdGame());

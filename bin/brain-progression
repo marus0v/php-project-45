@@ -14,6 +14,7 @@ if (file_exists($autoloadPath1)) {
 
 use function BrainGames\Engine\runGame;
 use function BrainGames\Progression\runProGame;
-use function BrainGames\Progression\getDescription;
 
-runGame(getDescription(), runProGame());
+use const BrainGames\Progression\DESCRIPTION;
+
+runGame(DESCRIPTION, runProGame());
