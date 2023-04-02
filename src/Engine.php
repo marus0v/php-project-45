@@ -27,8 +27,8 @@ function runGame(string $description, array $questionsAndAnswers)
     $winsNumber = 0;
     line($description);
     while ($winsNumber < TOTALWINSNUMBER) {
-        line("Question: %s", $questionsAndAnswers[$winsNumber + 1][0]);
-        (string)$result = $questionsAndAnswers[$winsNumber + 1][1];
+        line("Question: %s", $questionsAndAnswers[$winsNumber]['question']);
+        (string)$result = $questionsAndAnswers[$winsNumber]['answer'];
         $ans = getAnswer();
         if ($ans == $result) {
             $winsNumber++;

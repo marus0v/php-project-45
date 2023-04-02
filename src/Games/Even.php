@@ -22,21 +22,20 @@ function getQandA(): array
 {
     $qna = array();
     $number = mt_rand(0, 100);
-    $qna[] = $number;
+    $qna['question'] = $number;
     if (isEven($number)) {
-        $qna[] = "yes";
+        $qna['answer'] = "yes";
     } elseif (!isEven($number)) {
-        $qna[] = "no";
+        $qna['answer'] = "no";
     }
     return $qna;
 }
 
 function runEvenGame(): array
 {
-    $counter = 1;
+    $counter = 0;
     $questionsAndAnswers = array();
-    $questionsAndAnswers[0] = DESCRIPTION;
-    while ($counter < (TOTALWINSNUMBER + 1)) {
+    while ($counter < (TOTALWINSNUMBER)) {
         $questionsAndAnswers[$counter] = getQandA();
         $counter++;
     }

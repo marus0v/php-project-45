@@ -28,21 +28,21 @@ function countValues(array $values): array
     switch ($values[0]) {
         case "+":
             $question = "{$values[1]} + {$values[2]}";
-            $qna[] = $question;
+            $qna['question'] = $question;
             $result = $values[1] + $values[2];
-            $qna[] = $result;
+            $qna['answer'] = $result;
             break;
         case "-":
             $question = "{$values[1]} - {$values[2]}";
-            $qna[] = $question;
+            $qna['question'] = $question;
             $result = $values[1] - $values[2];
-            $qna[] = $result;
+            $qna['answer'] = $result;
             break;
         case "*":
             $question = "{$values[1]} * {$values[2]}";
-            $qna[] = $question;
+            $qna['question'] = $question;
             $result = $values[1] * $values[2];
-            $qna[] = $result;
+            $qna['answer'] = $result;
             break;
         default:
             throw new \Exception('No operator selected!');
@@ -52,10 +52,9 @@ function countValues(array $values): array
 
 function runCalcGame(): array
 {
-    $counter = 1;
+    $counter = 0;
     $questionsAndAnswers = array();
-    $questionsAndAnswers[0] = DESCRIPTION;
-    while ($counter < (TOTALWINSNUMBER + 1)) {
+    while ($counter < TOTALWINSNUMBER) {
         $values = getValues();
         $questionsAndAnswers[$counter] = countValues($values);
         $counter++;

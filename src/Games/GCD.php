@@ -22,12 +22,12 @@ function countValues(array $values): array
     $qna = array();
     $numA = $values[0];
     $numB = $values[1];
-    $qna[] = "{$numA} {$numB}";
+    $qna['question'] = "{$numA} {$numB}";
     $gcd = 1;
     if ($numA == $numB) {
         $gcd = $numA;
-        $values[] = $gcd;
-        return $values;
+        $qna['answer'] = $gcd;
+        return $qna;
     } else {
         while (($numA != 0) && ($numB != 0)) {
             if ($numA > $numB) {
@@ -37,18 +37,17 @@ function countValues(array $values): array
             }
         }
         $gcd = $numA + $numB;
-        $qna[] = $gcd;
-        $values[] = $gcd;
+        $qna['answer'] = $gcd;
+        // $values[] = $gcd;
     }
     return $qna;
 }
 
 function runGcdGame(): array
 {
-    $counter = 1;
+    $counter = 0;
     $questionsAndAnswers = array();
-    $questionsAndAnswers[0] = DESCRIPTION;
-    while ($counter < (TOTALWINSNUMBER + 1)) {
+    while ($counter < TOTALWINSNUMBER) {
         $values = getValues();
         $questionsAndAnswers[$counter] = countValues($values);
         $counter++;

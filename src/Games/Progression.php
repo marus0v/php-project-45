@@ -27,16 +27,15 @@ function getQandA(array $values): array
     $i = mt_rand(0, 9);
     $hid_values = $values;
     $hid_values[$i] = "..";
-    $qna[] = implode(" ", $hid_values);
-    $qna[] = $values[$i];
+    $qna['question'] = implode(" ", $hid_values);
+    $qna['answer'] = $values[$i];
     return $qna;
 }
 function runProGame()
 {
-    $counter = 1;
+    $counter = 0;
     $questionsAndAnswers = array();
-    $questionsAndAnswers[0] = DESCRIPTION;
-    while ($counter < (TOTALWINSNUMBER + 1)) {
+    while ($counter < TOTALWINSNUMBER) {
         $values = getValues();
         $questionsAndAnswers[$counter] = getQandA($values);
         $counter++;
