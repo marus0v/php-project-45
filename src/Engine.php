@@ -17,7 +17,7 @@ function runGame(string $description, array $questionsAndAnswers)
 {
     line('Welcome to the Brain Games!');
     $userName = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    line("Hello, %s!", $userName);
     $winsNumber = 0;
     line($description);
     while ($winsNumber < TOTALWINSNUMBER) {
