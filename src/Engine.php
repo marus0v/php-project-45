@@ -7,14 +7,6 @@ use function cli\prompt;
 
 const TOTALWINSNUMBER = 3;
 
-function welcomeUser()
-{
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
-    return $name;
-}
-
 function getAnswer(): string
 {
     $answer = prompt('Your answer: ');
@@ -23,7 +15,9 @@ function getAnswer(): string
 
 function runGame(string $description, array $questionsAndAnswers)
 {
-    $userName = welcomeUser();
+    line('Welcome to the Brain Games!');
+    $userName = prompt('May I have your name?');
+    line("Hello, %s!", $name);
     $winsNumber = 0;
     line($description);
     while ($winsNumber < TOTALWINSNUMBER) {
