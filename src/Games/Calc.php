@@ -21,9 +21,9 @@ function getValues(): array
     $values[] = $num2;
     return $values;
 }
+
 function countValues(array $values): array
 {
-    $result = 0;
     $qna = array();
     switch ($values[0]) {
         case "+":
