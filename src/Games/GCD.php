@@ -19,15 +19,15 @@ function getValues(): array
 }
 function countValues(array $values): array
 {
-    $qna = array();
+    $questionsAndAnswersLocal = [];
     $numA = $values[0];
     $numB = $values[1];
-    $qna['question'] = "{$numA} {$numB}";
+    $questionsAndAnswersLocal['question'] = "{$numA} {$numB}";
     $gcd = 1;
     if ($numA == $numB) {
         $gcd = $numA;
-        $qna['answer'] = $gcd;
-        return $qna;
+        $questionsAndAnswersLocal['answer'] = $gcd;
+        return $questionsAndAnswersLocal;
     } else {
         while (($numA != 0) && ($numB != 0)) {
             if ($numA > $numB) {
@@ -37,16 +37,15 @@ function countValues(array $values): array
             }
         }
         $gcd = $numA + $numB;
-        $qna['answer'] = $gcd;
-        // $values[] = $gcd;
+        $questionsAndAnswersLocal['answer'] = $gcd;
     }
-    return $qna;
+    return $questionsAndAnswersLocal;
 }
 
 function runGcdGame(): array
 {
     $counter = 0;
-    $questionsAndAnswers = array();
+    $questionsAndAnswers = [];
     while ($counter < TOTALWINSNUMBER) {
         $values = getValues();
         $questionsAndAnswers[$counter] = countValues($values);

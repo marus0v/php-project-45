@@ -53,7 +53,7 @@ function countValues(array $values): array
 function runCalcGame(): array
 {
     $counter = 0;
-    $questionsAndAnswers = array();
+    $questionsAndAnswers = [];
     while ($counter < TOTALWINSNUMBER) {
         $values = getValues();
         $questionsAndAnswers[$counter] = countValues($values);
