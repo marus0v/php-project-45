@@ -20,21 +20,21 @@ function isEven(int $number): bool
 
 function getQandA(): array
 {
-    $qna = array();
+    $questionsAndAnswersLocal = [];
     $number = mt_rand(0, 100);
-    $qna['question'] = $number;
+    $questionsAndAnswersLocal['question'] = $number;
     if (isEven($number)) {
-        $qna['answer'] = "yes";
-    } elseif (!isEven($number)) {
-        $qna['answer'] = "no";
+        $questionsAndAnswersLocal['answer'] = "yes";
+    } else {
+        $questionsAndAnswersLocal['answer'] = "no";
     }
-    return $qna;
+    return $questionsAndAnswersLocal;
 }
 
 function runEvenGame(): array
 {
     $counter = 0;
-    $questionsAndAnswers = array();
+    $questionsAndAnswers = [];
     while ($counter < (TOTALWINSNUMBER)) {
         $questionsAndAnswers[$counter] = getQandA();
         $counter++;
