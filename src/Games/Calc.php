@@ -24,30 +24,30 @@ function getValues(): array
 
 function countValues(array $values): array
 {
-    $qna = array();
+    $questionsAndAnswersLocal = [];
     switch ($values[0]) {
         case "+":
             $question = "{$values[1]} + {$values[2]}";
-            $qna['question'] = $question;
+            $questionsAndAnswersLocal['question'] = $question;
             $result = $values[1] + $values[2];
-            $qna['answer'] = $result;
+            $questionsAndAnswersLocal['answer'] = $result;
             break;
         case "-":
             $question = "{$values[1]} - {$values[2]}";
-            $qna['question'] = $question;
+            $questionsAndAnswersLocal['question'] = $question;
             $result = $values[1] - $values[2];
-            $qna['answer'] = $result;
+            $questionsAndAnswersLocal['answer'] = $result;
             break;
         case "*":
             $question = "{$values[1]} * {$values[2]}";
-            $qna['question'] = $question;
+            $questionsAndAnswersLocal['question'] = $question;
             $result = $values[1] * $values[2];
-            $qna['answer'] = $result;
+            $questionsAndAnswersLocal['answer'] = $result;
             break;
         default:
             throw new \Exception('No operator selected!');
     }
-    return $qna;
+    return $questionsAndAnswersLocal;
 }
 
 function runCalcGame(): array
