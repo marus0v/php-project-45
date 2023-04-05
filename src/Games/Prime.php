@@ -9,13 +9,6 @@ use const BrainGames\Engine\TOTALWINSNUMBER;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function getValue(): int
-{
-    $num = mt_rand(1, 1000);
-    line("Question: %s", $num);
-    return $num;
-}
-
 function isPrime(int $number): bool
 {
     $flag = true;
@@ -30,20 +23,20 @@ function isPrime(int $number): bool
 
 function getQandA(): array
 {
-    $qna = array();
+    $questionsAndAnswersLocal = [];
     $number = mt_rand(0, 1000);
-    $qna['question'] = $number;
+    $questionsAndAnswersLocal['question'] = $number;
     if (isPrime($number)) {
-        $qna['answer'] = "yes";
+        $questionsAndAnswersLocal['answer'] = "yes";
     } elseif (!isPrime($number)) {
-        $qna['answer'] = "no";
+        $questionsAndAnswersLocal['answer'] = "no";
     }
-    return $qna;
+    return $questionsAndAnswersLocal;
 }
 function runPrimeGame(): array
 {
     $counter = 0;
-    $questionsAndAnswers = array();
+    $questionsAndAnswers = [];
     while ($counter < TOTALWINSNUMBER) {
         $questionsAndAnswers[$counter] = getQandA();
         $counter++;
