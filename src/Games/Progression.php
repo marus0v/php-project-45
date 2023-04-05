@@ -12,29 +12,28 @@ function getValues(): array
 {
     $num1 = mt_rand(1, 100);
     $num2 = mt_rand(1, 10);
-    $values = array();
+    $values = [];
     $values[] = $num1;
     for ($i = 0; $i < 9; $i++) {
         $values[] = $values[$i] + $num2;
     }
-    $str_values = implode(" ", $values);
     return $values;
 }
 
 function getQandA(array $values): array
 {
-    $qna = array();
+    $questionsAndAnswersLocal = [];
     $i = mt_rand(0, 9);
-    $hid_values = $values;
-    $hid_values[$i] = "..";
-    $qna['question'] = implode(" ", $hid_values);
-    $qna['answer'] = $values[$i];
-    return $qna;
+    $hidValues = $values;
+    $hidValues[$i] = "..";
+    $questionsAndAnswersLocal['question'] = implode(" ", $hidValues);
+    $questionsAndAnswersLocal['answer'] = $values[$i];
+    return $questionsAndAnswersLocal;
 }
 function runProGame()
 {
     $counter = 0;
-    $questionsAndAnswers = array();
+    $questionsAndAnswers = [];
     while ($counter < TOTALWINSNUMBER) {
         $values = getValues();
         $questionsAndAnswers[$counter] = getQandA($values);
