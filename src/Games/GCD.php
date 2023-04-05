@@ -3,6 +3,7 @@
 namespace BrainGames\GCD;
 
 use function cli\line;
+use function BrainGames\Engine\runGame;
 
 use const BrainGames\Engine\TOTALWINSNUMBER;
 
@@ -42,7 +43,7 @@ function countValues(array $values): array
     return $questionsAndAnswersLocal;
 }
 
-function runGcdGame(): array
+function runGcdGame()
 {
     $counter = 0;
     $questionsAndAnswers = [];
@@ -51,5 +52,5 @@ function runGcdGame(): array
         $questionsAndAnswers[$counter] = countValues($values);
         $counter++;
     }
-    return $questionsAndAnswers;
+    runGame(DESCRIPTION, $questionsAndAnswers);
 }

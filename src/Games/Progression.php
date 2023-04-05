@@ -3,6 +3,7 @@
 namespace BrainGames\Progression;
 
 use function cli\line;
+use function BrainGames\Engine\runGame;
 
 use const BrainGames\Engine\TOTALWINSNUMBER;
 
@@ -39,5 +40,5 @@ function runProGame()
         $questionsAndAnswers[$counter] = getQandA($values);
         $counter++;
     }
-    return $questionsAndAnswers;
+    runGame(DESCRIPTION, $questionsAndAnswers);
 }

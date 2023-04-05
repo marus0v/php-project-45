@@ -4,6 +4,7 @@ namespace BrainGames\Calc;
 
 use function cli\line;
 use function cli\prompt;
+use function BrainGames\Engine\runGame;
 
 use const BrainGames\Engine\TOTALWINSNUMBER;
 
@@ -50,7 +51,7 @@ function countValues(array $values): array
     return $questionsAndAnswersLocal;
 }
 
-function runCalcGame(): array
+function runCalcGame()
 {
     $counter = 0;
     $questionsAndAnswers = [];
@@ -59,5 +60,5 @@ function runCalcGame(): array
         $questionsAndAnswers[$counter] = countValues($values);
         $counter++;
     }
-    return $questionsAndAnswers;
+    runGame(DESCRIPTION, $questionsAndAnswers);
 }

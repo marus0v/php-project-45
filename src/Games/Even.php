@@ -4,6 +4,7 @@ namespace BrainGames\Even;
 
 use function cli\line;
 use function cli\prompt;
+use function BrainGames\Engine\runGame;
 
 use const BrainGames\Engine\TOTALWINSNUMBER;
 
@@ -31,7 +32,7 @@ function getQandA(): array
     return $questionsAndAnswersLocal;
 }
 
-function runEvenGame(): array
+function runEvenGame()
 {
     $counter = 0;
     $questionsAndAnswers = [];
@@ -39,5 +40,5 @@ function runEvenGame(): array
         $questionsAndAnswers[$counter] = getQandA();
         $counter++;
     }
-    return $questionsAndAnswers;
+    runGame(DESCRIPTION, $questionsAndAnswers);
 }

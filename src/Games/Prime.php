@@ -4,6 +4,7 @@ namespace BrainGames\Prime;
 
 use function cli\line;
 use function cli\prompt;
+use function BrainGames\Engine\runGame;
 
 use const BrainGames\Engine\TOTALWINSNUMBER;
 
@@ -33,7 +34,7 @@ function getQandA(): array
     }
     return $questionsAndAnswersLocal;
 }
-function runPrimeGame(): array
+function runPrimeGame()
 {
     $counter = 0;
     $questionsAndAnswers = [];
@@ -41,5 +42,5 @@ function runPrimeGame(): array
         $questionsAndAnswers[$counter] = getQandA();
         $counter++;
     }
-    return $questionsAndAnswers;
+    runGame(DESCRIPTION, $questionsAndAnswers);
 }
